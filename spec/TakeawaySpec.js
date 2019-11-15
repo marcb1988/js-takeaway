@@ -5,13 +5,12 @@ describe('takeaway', function () {
 
     beforeEach(function () {
         takeaway = new Takeaway();
+        takeaway.showMenu();
     });
 
     it('has a menu', function () {
-        expect(takeaway.menu).toBeDefined();
+        expect(takeaway.dishes).toBeDefined();
+        expect(takeaway.dishes[1].name).toEqual('Chow Mein');
     });
 
-    it('can display the menu', function () {
-        expect(takeaway.showMenu).toContain('Kebab')
-    })
 });
