@@ -6,7 +6,12 @@ describe('takeaway', function () {
     beforeEach(function () {
         takeaway = new Takeaway();
     });
-    it('shows the items', function () {
-        expect(takeaway.menu).toInclude('Kebab');
+
+    it('has a menu', function () {
+        expect(takeaway.menu).toBeDefined();
     });
+
+    it('can display the menu', function () {
+        expect(takeaway.showMenu).toContain('Kebab')
+    })
 });
